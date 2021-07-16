@@ -6,7 +6,6 @@ import { ExclamationCircleOutlined, LogoutOutlined, } from "@ant-design/icons";
 const { Header, Content, Sider } = Layout;
 const { SubMenu } = Menu;
 const { confirm } = Modal;
-
 function Dashboard() {
       const history = useHistory();
       const location = useLocation();
@@ -38,11 +37,15 @@ function Dashboard() {
     <Sider className="Dashboard_Sidebar" width='auto' breakpoint="lg" collapsedWidth="0"  onBreakpoint={broken => {  console.log(broken);  }}
       onCollapse={(collapsed, type) => {  console.log(collapsed, type);  }} 
       >
-      <div className="logo text-white text-center py-3">Logo Here</div>
-      <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']} >
+      <div className="logo text-white text-center py-3">Logo Here <br/>
+      </div>
+      <Menu theme="dark" mode="inline" defaultSelectedKeys={['0']} >
            {/*  Menue item started here */}
             {/*  Sub-Menue 1*/}
            <SubMenu key="sub1" title="Independent Component">
+                    <Menu.Item key="0"> 
+                            <Link to="/safepotblogcomponent">SafePot Blog Component</Link>
+                    </Menu.Item>
                     <Menu.Item key="1"> 
                             <Link to="/">Home</Link>
                     </Menu.Item>

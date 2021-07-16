@@ -3,6 +3,7 @@ import { Route, Switch,BrowserRouter  } from "react-router-dom";
 import App from "../Pages/App";
 import Footer from "../Pages/Footer";
 import Header from "../Pages/Header";
+import Safepotblogcomponent from "../Pages/safepotblogcomponent";
 function Routes() {
     return (
         
@@ -10,6 +11,7 @@ function Routes() {
                 <Route  path="/" exact ><App/> </Route>
                 <Route path="/header" ><Header/> </Route>
                 <Route path="/footer" ><Footer/> </Route>  
+                <Route path="/safepotblogcomponent" ><Safepotblogcomponent/> </Route>  
            </Switch>
      
    
